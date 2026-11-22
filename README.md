@@ -111,15 +111,17 @@ O resultado é um índice multicritério de prioridade, não um ROI financeiro.
 
 ### 6.2. Instalação
 
-Copie a pasta `engenheiro-economico` para o diretório de skills do ambiente:
+No repositório, a Skill está localizada em skills/engenheiro-economico/.
+
+Para instalá-la em um projeto que utiliza o padrão Agent Skills, copie essa pasta para o diretório de descoberta do ambiente:
 
 ```text
 .agents/skills/engenheiro-economico/
 ```
 
-A disposição das pastas deve respeitar a estrutura apresentada neste README.
+Após a cópia, a estrutura no projeto de destino deverá conter o arquivo SKILL.md diretamente dentro da pasta engenheiro-economico, acompanhado dos diretórios assets, references e scripts.
 
-No Codex CLI, abra o ambiente do projeto e verifique a disponibilidade da skill por meio do comando:
+No Codex CLI, abra o ambiente do projeto e verifique a disponibilidade da Skill por meio do comando:
 
 ```text
 /skills
@@ -134,14 +136,16 @@ Os scripts podem ser executados independentemente da interação com a IA.
 Análise financeira:
 
 ```powershell
-py .\skills\engenheiro-economico\scripts\calc_vpl_tir.py --file .\examples\oficinapro_financeiro.json
+py .\.agents\skills\engenheiro-economico\scripts\calc_vpl_tir.py --file .\caminho\para\entrada_financeira.json
 ```
 
 GVA e priorização do backlog:
 
 ```powershell
-py .\skills\engenheiro-economico\scripts\calc_gva.py --file .\examples\oficinapro_gva_backlog.json
+py .\.agents\skills\engenheiro-economico\scripts\calc_gva.py --file .\caminho\para\entrada_gva_backlog.json
 ```
+
+Os caminhos apresentados são ilustrativos. Os arquivos JSON devem ser preparados pelo usuário conforme os parâmetros esperados por cada script.
 
 Ambos aceitam entradas JSON por arquivo, argumento de linha de comando ou entrada padrão.
 
