@@ -1,0 +1,37 @@
+# Python - arquivos compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Configurações de ferramentas e IDEs
+.vscode/
+.idea/
+
+# Arquivos temporários
+*.tmp
+*.log
+*.bak
+
+# Variáveis de ambiente e credenciais
+.env
+.env.*
+!.env.example
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Arquivos de testes e cobertura
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Arquivos temporários de editores
+*.swp
+*.swo
